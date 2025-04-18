@@ -1,0 +1,18 @@
+[project]
+name = "ghostscale"
+version = "0.1.0"
+description = "Wrapper-System zur intelligenten VPN-Steuerung per Tailscale"
+authors = [{ name = "Ghostscale Dev", email = "ghost@localhost" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "click",
+    "pyyaml"
+]
+
+[project.scripts]
+ghostscale = "ghostscale.cli:cli"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
