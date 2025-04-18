@@ -2,7 +2,7 @@
 name = "ghostscale"
 version = "0.1.0"
 description = "Wrapper-System zur intelligenten VPN-Steuerung per Tailscale"
-authors = [{ name = "Ghostscale Dev", email = "ghost@localhost" }]
+authors = [{ name = "Dierk Zehe", email = "mgcmshr@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
@@ -14,5 +14,11 @@ dependencies = [
 ghostscale = "ghostscale.cli:cli"
 
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ghostscale"]
+
+[tool.setuptools.package-dir]
+"" = "."
