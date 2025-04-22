@@ -11,7 +11,7 @@ class ConfigManager(metaclass=SingletonMeta):
 
     def load_config(self):
         if not self.config_path.exists():
-            print(f"Konfigurationsdatei fehlt: {self.config_path}")
+            print(f"Configuration file is missing: {self.config_path}")
             sys.exit(1)
         with open(self.config_path) as f:
             return yaml.safe_load(f)
